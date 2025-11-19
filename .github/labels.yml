@@ -1,0 +1,214 @@
+# ===========================
+# General Labels
+# ===========================
+- name: bug
+  color: "d73a4a"
+  description: "Something is not working"
+
+- name: enhancement
+  color: "a2eeef"
+  description: "New feature or feature request"
+
+- name: help wanted
+  color: "008672"
+  description: "Extra attention is needed"
+
+- name: question
+  color: "d876e3"
+  description: "Further information is requested"
+
+- name: documentation
+  color: "0075ca"
+  description: "General documentation changes"
+
+# ===========================
+# Priority Labels
+# ===========================
+- name: "priority: low"
+  color: "bfe5bf"
+  description: "Low priority task"
+
+- name: "priority: medium"
+  color: "fef2c0"
+  description: "Medium priority task"
+
+- name: "priority: high"
+  color: "ffd8b5"
+  description: "High priority task"
+
+- name: "priority: critical"
+  color: "b60205"
+  description: "Must be addressed immediately"
+
+# ===========================
+# Type Labels
+# ===========================
+- name: "type: feature"
+  color: "0e8a16"
+  description: "New feature implementation"
+
+- name: "type: bugfix"
+  color: "d73a4a"
+  description: "Bug fix"
+
+- name: "type: refactor"
+  color: "1d76db"
+  description: "Refactoring or code cleanup"
+
+- name: "type: tests"
+  color: "5319e7"
+  description: "Testing-related changes"
+
+# ===========================
+# Status Labels
+# ===========================
+- name: "status: in progress"
+  color: "c2e0c6"
+  description: "Work has started"
+
+- name: "status: blocked"
+  color: "b60205"
+  description: "Work is currently blocked"
+
+- name: "status: review needed"
+  color: "fbca04"
+  description: "Waiting for code review"
+
+- name: "status: ready for testing"
+  color: "0e8a16"
+  description: "Ready for testing"
+
+# ===========================
+# Frontend Labels
+# ===========================
+- name: frontend
+  color: "fbca04"
+  description: "Frontend-related changes"
+
+- name: "frontend: ui"
+  color: "ffd400"
+  description: "UI components, layouts, and visual updates"
+
+- name: "frontend: ux"
+  color: "ffea7f"
+  description: "UX improvements and flow changes"
+
+- name: "frontend: styling"
+  color: "fef2c0"
+  description: "CSS, design system, and visual styling"
+
+- name: "frontend: performance"
+  color: "f7c6c7"
+  description: "Frontend performance improvements"
+
+- name: "frontend: build"
+  color: "c5def5"
+  description: "Build tools or bundler config changes"
+
+# ===========================
+# Backend Labels
+# ===========================
+- name: backend
+  color: "5319e7"
+  description: "Backend-related work"
+
+- name: "backend: api"
+  color: "006b75"
+  description: "API endpoints and route logic"
+
+- name: "backend: database"
+  color: "4c1"
+  description: "Database models, migrations, and queries"
+
+- name: "backend: logic"
+  color: "cfd3d7"
+  description: "Business logic or core functionality"
+
+- name: "backend: performance"
+  color: "c2e0c6"
+  description: "Backend performance improvements"
+
+- name: "backend: architecture"
+  color: "bfdadc"
+  description: "System architecture or design updates"
+
+# ===========================
+# DevOps Labels
+# ===========================
+- name: devops
+  color: "0e8a16"
+  description: "DevOps, pipelines, infrastructure, automation"
+
+- name: "devops: ci"
+  color: "2f6f66"
+  description: "CI workflows and pipelines"
+
+- name: "devops: cd"
+  color: "2b3137"
+  description: "Deployment automation or release pipelines"
+
+- name: "devops: infra"
+  color: "1d76db"
+  description: "Infrastructure as code"
+
+- name: "devops: monitoring"
+  color: "5319e7"
+  description: "Monitoring, alerting, logging systems"
+
+- name: "devops: docker"
+  color: "384d54"
+  description: "Dockerfiles, containers, and image optimization"
+
+# ===========================
+# Machine Learning Labels
+# ===========================
+- name: ml
+  color: "fbca04"
+  description: "Machine Learning or AI-related changes"
+
+- name: "ml: model-training"
+  color: "ffe599"
+  description: "Training or tuning ML models"
+
+- name: "ml: data-prep"
+  color: "c5e1a5"
+  description: "Data preprocessing and feature engineering"
+
+- name: "ml: evaluation"
+  color: "aed581"
+  description: "Model evaluation and metrics"
+
+- name: "ml: deployment"
+  color: "81c784"
+  description: "Deploying ML models to production"
+
+- name: "ml: research"
+  color: "f48fb1"
+  description: "Research, experimentation, PoCs"
+
+# ===========================
+# Security Labels
+# ===========================
+- name: security
+  color: "b60205"
+  description: "Security vulnerabilities or fixes"
+
+- name: "security: audit"
+  color: "d73a4a"
+  description: "Security audits or scanning"
+
+- name: "security: dependency"
+  color: "e99695"
+  description: "Vulnerable dependencies and updates"
+
+- name: "security: auth"
+  color: "f9d0c4"
+  description: "Authentication and authorization issues"
+
+- name: "security: encryption"
+  color: "9e1c1c"
+  description: "Encryption, certificates, secrets management"
+
+- name: "security: compliance"
+  color: "c90f2f"
+  description: "Compliance (GDPR, SOC2, ISO, HIPAA)"
