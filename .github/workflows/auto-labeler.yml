@@ -12,64 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Determine labels based on changed files
+      - name: Run labeler script
         id: labeler
         uses: actions/github-script@v7
         with:
           script: |
-            const prNumber = context.payload.pull_request.number;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-
-            // Get list of changed files
-            const { data: files } = await github.rest.pulls.listFiles({
-              owner,
-              repo,
-              pull_number: prNumber,
-            });
-
-            const labels = new Set();
-
-            // Label rules based on file paths
-            const rules = [
-              { label: "frontend", patterns: ["frontend/**", "src/ui/**", "**/*.css", "**/*.scss", "**/*.vue", "**/*.jsx", "**/*.tsx"] },
-              { label: "backend", patterns: ["backend/**", "src/server/**", "**/*.go", "**/*.py", "**/*.java", "**/*.rb", "**/*.php"] },
-              { label: "devops", patterns: [".github/workflows/**", "infra/**", "docker/**", "**/Dockerfile", "**/*.tf", "**/*.yml"] },
-              { label: "ml", patterns: ["ml/**", "notebooks/**", "models/**", "**/*.ipynb"] },
-              { label: "security", patterns: ["security/**", "audit/**"] },
-              { label: "documentation", patterns: ["docs/**", "**/*.md", "**/*.rst"] }
-            ];
-
-            // Match file paths with patterns
-            const micromatch = require("micromatch");
-
-            for (const file of files) {
-              const filePath = file.filename;
-
-              for (const rule of rules) {
-                if (micromatch.isMatch(filePath, rule.patterns)) {
-                  labels.add(rule.label);
-                }
-              }
-            }
-
-            // Convert Set to array
-            const labelArray = [...labels];
-
-            core.setOutput("labels", JSON.stringify(labelArray));
-            core.info(`Labels to add: ${labelArray.join(", ")}`);
-
-      - name: Apply labels to PR
-        if: steps.labeler.outputs.labels != '[]'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const labels = JSON.parse(core.getInput("labels", { required: false }) || steps.labeler.outputs.labels);
-            if (labels.length > 0) {
-              await github.rest.issues.addLabels({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.payload.pull_request.number,
-                labels
-              });
-            }
+            const fs = require("fs");
+            const script = fs.readFileSync("../scripts/labeler.js", "utf8");
+            eval(script);
