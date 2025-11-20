@@ -1,0 +1,29 @@
+name: Auto Labeler for Issue Templates
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  apply-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract issue template type
+        id: template
+        uses: "actions-ecosystem/action-get-issue-template@v1"
+
+      - name: Debug template name
+        run: 'echo "Template used: ${{ steps.template.outputs.name }}"'
+
+      - name: Apply label based on template
+        if: steps.template.outputs.name != ''
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            ${{ steps.template.outputs.name }}
