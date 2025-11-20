@@ -1,0 +1,54 @@
+name: "Story"
+description: "A user story describing a feature or behavior from the user's perspective."
+title: "[STORY] "
+labels: ["story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📗 User Story
+        Stories describe functionality from the user’s perspective.
+
+  - type: textarea
+    id: user
+    attributes:
+      label: "As a..."
+      placeholder: "As a user/admin/developer..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: action
+    attributes:
+      label: "I want to..."
+      placeholder: "I want to be able to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: "So that..."
+      placeholder: "So that I can..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      placeholder: "- [ ] Scenario 1...\n- [ ] Scenario 2..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "Related Epics or Tasks"
+      placeholder: "- #EpicID\n- #TaskID"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Additional Notes"
+      placeholder: "Additional information, considerations, risks, etc."

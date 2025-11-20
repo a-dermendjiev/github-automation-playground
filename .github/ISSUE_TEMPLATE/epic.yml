@@ -1,0 +1,54 @@
+name: "Epic"
+description: "A high-level initiative that groups multiple stories and tasks."
+title: "[EPIC] "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📘 Epic Overview
+        Provide a high-level description of what this Epic aims to accomplish.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "Describe the goals and scope of the Epic."
+      placeholder: "This epic aims to achieve..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: objectives
+    attributes:
+      label: "Objectives"
+      description: "What will this epic accomplish?"
+      placeholder: "- Objective 1\n- Objective 2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: "Deliverables"
+      description: "List the key deliverables expected from this Epic."
+      placeholder: "- Deliverable 1\n- Deliverable 2"
+
+  - type: textarea
+    id: stories
+    attributes:
+      label: "Linked Stories"
+      description: "Add child stories that belong to this epic."
+      placeholder: "- #123 Story A\n- #124 Story B"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Risks & Dependencies"
+      placeholder: "- Risk 1\n- Dependency 1"
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      placeholder: "- [ ] Criteria 1\n- [ ] Criteria 2"
