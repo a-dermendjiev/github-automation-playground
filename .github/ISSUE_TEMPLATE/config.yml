@@ -1,0 +1,16 @@
+blank_issues_enabled: false
+
+issue_template:
+  - name: "Epic"
+    description: "Create a high-level Epic that groups multiple stories."
+    file: "epic.yml"
+
+  - name: "Story"
+    description: "Create a user story that describes functionality from a user perspective."
+    file: "story.yml"
+
+  - name: "Task"
+    description: "Create a technical task or work item."
+    file: "task.yml"
+
+contact_links: []

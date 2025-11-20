@@ -1,0 +1,39 @@
+name: "Task"
+description: "A technical task or work item."
+title: "[TASK] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📘 Task
+        A small, well-defined unit of work. Usually part of a Story or Epic.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Task Description"
+      placeholder: "This task involves..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps / Subtasks"
+      description: "Break down the task if needed"
+      placeholder: "- [ ] Step 1\n- [ ] Step 2"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies"
+      placeholder: "- Depends on #123"
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      placeholder: "- [ ] The task is completed when...\n- [ ] Validation steps"
+    validations:
+      required: true
