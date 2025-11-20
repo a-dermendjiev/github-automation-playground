@@ -17,6 +17,8 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require("fs");
-            const script = fs.readFileSync(".github/scripts/labeler.js", "utf8");
-            eval(script);
+            await (async () => {
+              const fs = require("fs");
+              const script = fs.readFileSync(".github/scripts/labeler.js", "utf8");
+              eval(script);
+            })();
